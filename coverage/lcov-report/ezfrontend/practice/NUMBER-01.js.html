@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for ezfrontend/practice/01-01-calcSn.js</title>
+    <title>Code coverage report for ezfrontend/practice/NUMBER-01.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">ezfrontend/practice</a> 01-01-calcSn.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">ezfrontend/practice</a> NUMBER-01.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>28/28</span>
+                <span class='fraction'>19/19</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/18</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -88,92 +88,68 @@
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// bài 1 Tính S(n) = 1 + 2 + 3 + .. + n;
-export function calcSnV1(n) {
-  if(typeof n !== 'number') return false;
-  if(n === 0) return 0;
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//// icreasingNumber : 123 234 456. from 10 &lt; n &lt;= 1000
+export function isIncreasingNumberV1(n) {
+  if (n &lt; 10 || n &gt; 1000) return false;
 &nbsp;
-  let output = 0;
+  let output = true;
+  const array = n.toString().split("");
 &nbsp;
-  for (let i = 1; i &lt;= n; i++) {
-      output += i;
+  array.forEach( (value, index) =&gt;  {
+    if( value &gt;= array[index + 1])    return output = false;
+  }); 
+&nbsp;
+  return output; 
+}
+// console.log(isIncreasingNumberV1(122)); 
+&nbsp;
+export function isIncreasingNumberV2(n) {
+  if (n &lt; 10 || n &gt; 1000000) return false;
+&nbsp;
+  let remaining = n;
+  let prevDigit = 10;
+&nbsp;
+  while(remaining &gt; 0) {
+    let digit = remaining % 10;
+    if(digit &gt;= prevDigit) return false;
+    prevDigit = digit;
+    remaining = Math.trunc(remaining / 10);
   }
-&nbsp;
-  return output;
+  return true;
 }
+// console.log(isIncreasingNumberV2(455));
 &nbsp;
-&nbsp;
-export function calcSnV2(n) {
-  if(typeof n !== 'number') return false;
-  if(n === 0) return 0;
-&nbsp;
-  let output = 0;
-&nbsp;
-  const numberList = Array.from(Array(n+1), (v,i) =&gt; i);
-  numberList.forEach(number =&gt; {
-    output += parseInt(number);
-  })
-&nbsp;
-  return output;
-}
-&nbsp;
-export function calcSnV3(n) {
-  if(typeof n !== 'number') return false;
-  if(n === 0) return 0;
-&nbsp;
-  let output = 0;
-&nbsp;
-  const numberList = Array.from(Array(n+1), (v,i) =&gt; i);
-&nbsp;
-  return numberList.reduce((acc, item) =&gt; acc + item);
-}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

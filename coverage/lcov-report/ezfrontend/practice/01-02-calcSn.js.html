@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for ezfrontend/practice/01-01-calcSn.js</title>
+    <title>Code coverage report for ezfrontend/practice/01-02-calcSn.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">ezfrontend/practice</a> 01-01-calcSn.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">ezfrontend/practice</a> 01-02-calcSn.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -115,9 +115,9 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,7 +135,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// bài 1 Tính S(n) = 1 + 2 + 3 + .. + n;
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// // Bài 2: Tính S(n) = 1^2 + 2^2 + … + n^2
 export function calcSnV1(n) {
   if(typeof n !== 'number') return false;
   if(n === 0) return 0;
@@ -143,7 +143,7 @@ export function calcSnV1(n) {
   let output = 0;
 &nbsp;
   for (let i = 1; i &lt;= n; i++) {
-      output += i;
+      output += Math.pow(i,2);
   }
 &nbsp;
   return output;
@@ -154,11 +154,11 @@ export function calcSnV2(n) {
   if(typeof n !== 'number') return false;
   if(n === 0) return 0;
 &nbsp;
-  let output = 0;
-&nbsp;
   const numberList = Array.from(Array(n+1), (v,i) =&gt; i);
+&nbsp;
+  let output = 0;
   numberList.forEach(number =&gt; {
-    output += parseInt(number);
+    output += Math.pow(parseInt(number), 2);
   })
 &nbsp;
   return output;
@@ -172,7 +172,7 @@ export function calcSnV3(n) {
 &nbsp;
   const numberList = Array.from(Array(n+1), (v,i) =&gt; i);
 &nbsp;
-  return numberList.reduce((acc, item) =&gt; acc + item);
+  return numberList.reduce((acc, item) =&gt; acc + Math.pow(item, 2));
 }
 &nbsp;</pre></td></tr></table></pre>
 
