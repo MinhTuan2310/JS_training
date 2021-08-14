@@ -1,18 +1,28 @@
-function statisticsWords(str) {
-  if(!typeof str === 'string') return "invalid params";
+export function statisticsWords(str) {
+  if(typeof str !== 'string' || str.trim().length <= 0) return "invalid param";
 
   
   return str
     .split(" ")
-    .reduce((acc, value) => {
-      if(acc[value]) {
-         acc[value] = acc[value] + 1;
-        } else {
-        acc[value] = 1;
-      }
+    .filter(item => item !== "")
+    .reduce((statisticsWord, word) => {
+        statisticsWord[word] = statisticsWord[word] !== undefined ? statisticsWord[word] + 1 : 1;
 
-      return acc;
+      return statisticsWord;
     }, {})
 }
 
-console.log(statisticsWords("easy frontend easy easy frontend"));
+export function statisticsWordsV2(str) {
+  if(typeof str !== 'string' || str.trim().length <= 0) return "invalid param";
+
+  let output = {};
+  let statisticsWord = str.split(" ").filter(item => item !== "");
+  for (let i = 0; i < statisticsWord.length; i++) {
+    if(output[statisticsWord[i]]) {
+      output[statisticsWord[i]] += 1;
+    } else {
+      output[statisticsWord[i]] = 1;
+    }
+  }
+  return output;
+}
