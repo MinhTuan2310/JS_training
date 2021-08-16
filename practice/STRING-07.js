@@ -22,3 +22,6 @@ console.log(fillPath('/categories/:categoryId/products/:productId', {
  }));
 
 
+
+
+
