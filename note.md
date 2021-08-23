@@ -13,7 +13,7 @@
 
 - type coersion: auto convert kiểu dữ liệu;
 - ty conversion: manual convert;
-- so sánh kí tự theo unicoode utf8 , kí tự luon lớn hơn số;
+- so sánh kí tự theo unicoode utf16 , kí tự luon lớn hơn số;
 - so sánh khác kiểu dữ lieu: chuyển về number hết
 - Boolean : cờ hiệu (true-false), lính canh (giữ giá trị);
 
@@ -25,3 +25,21 @@ ARRAY
 TESTCASE:
 - kiem tra ket quả trả về là gì => có bao nhiu cái test tương ứng;
 - comment các dòng log k sẽ bi lỗi;
+
+- bubble sort 
+function bubbleSort(arrayList) {
+  if(!Array.isArray(arrayList)) return false;
+
+  const newArr = [...arrayList];
+
+  for(let i = 0; i < newArr.length - 1; i++) {
+    for(let j = i + 1;j < newArr.length; j++) {
+      if(newArr[i] - newArr[j] > 0) {
+        let current = newArr[i];
+        newArr[i] = newArr[j];
+        newArr[j] = current;
+      }
+    }
+  }
+  return newArr;
+}

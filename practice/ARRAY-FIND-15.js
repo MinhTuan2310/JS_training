@@ -7,8 +7,7 @@ const productList = [
 function findFirstIPhone(productList) {
   if(!Array.isArray(productList)) return false;
 
-  return productList.find( product => product
-    .name
+  return productList.find( product => product.name
     .toLowerCase()
     .includes("iphone")
     );
