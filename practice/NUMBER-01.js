@@ -6,7 +6,7 @@ export function isIncreasingNumberV1(n) {
   const array = n.toString().split("");
 
   array.forEach( (value, index) =>  {
-    if( value >= array[index + 1])    return output = false;
+    if( value >= array[index + 1])  output = false;
   }); 
 
   return output; 
