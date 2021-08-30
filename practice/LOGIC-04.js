@@ -27,9 +27,11 @@ function  findMostFrequentNumber(numberList) {
   }, 0);
 
   return +Object.keys(obj)
-  .find(key => Number.parseInt(key) === maxNumber);
+  .find(key => obj[key] === maxNumber);
+
 }
 
 console.log(findMostFrequentNumber([1]));
 console.log(findMostFrequentNumber([1, 2, 3, 2]));
-console.log(findMostFrequentNumber([1, 2, 3, 2, 3, 3, 4]));
+console.log(findMostFrequentNumber([1, 2, 3, 2, 3, 3, 4, 4, 4, 4, 4]));
+console.log(findMostFrequentNumber([1, 2, 3, 2, 4]));
