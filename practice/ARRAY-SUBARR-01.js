@@ -27,4 +27,5 @@ function  findAllIncreasingSubArr(numberList) {
 console.log(findAllIncreasingSubArr([1,2,3,-5,-10,5,10]));
 console.log(findAllIncreasingSubArr([1,2,3,1,2,3]));
 console.log(findAllIncreasingSubArr([1,2,3,1,1,1,2,1]));
+console.log(findAllIncreasingSubArr([2,1]));
 
