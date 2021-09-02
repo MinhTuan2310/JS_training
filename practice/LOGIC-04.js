@@ -36,3 +36,20 @@
 // console.log(findMostFrequentNumber([1, 2, 3, 2, 4]));
 
 
+function getUniqueWords(sentence) {
+  if(typeof sentence !== 'string' || !sentence.trim()) return [];
+
+  return sentence
+  .split(" ")
+  .filter(word => word !== "")
+  .reduce((newArr, word) => {
+    if(!newArr.includes(word)) {
+      newArr.push(word)
+    }
+
+    return newArr;
+  }, []);
+}
+
+console.log(getUniqueWords("easy frontend easy but is    "));
+console.log(getUniqueWords(""));

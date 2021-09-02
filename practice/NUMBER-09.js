@@ -8,3 +8,4 @@ export function hasTwoDigitsWithSum(n, sum) {
   return numberList
     .some(item => totalDigit - item === sum);
 }
+

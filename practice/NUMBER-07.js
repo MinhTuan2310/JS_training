@@ -3,3 +3,5 @@ export function isSymetricNumber(n) {
 
   return +n.toString().split("").reverse().join("") === n;
 }
+
+// console.log(isSymetricNumber());

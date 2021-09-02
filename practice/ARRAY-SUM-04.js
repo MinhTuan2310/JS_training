@@ -7,7 +7,7 @@ function calcCartTotal(cartItemList) {
   if(!Array.isArray(cartItemList)) return false;
 
   return cartItemList.reduce((acc, cartItem) => {
-    let productPrice = cartItem.product.price * cartItem.quantity;
+    const productPrice = cartItem.product.price * cartItem.quantity;
 
     return acc + productPrice;
   }, 0);

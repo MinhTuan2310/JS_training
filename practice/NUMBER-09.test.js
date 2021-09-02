@@ -20,7 +20,7 @@ describe('hasTwoDigitsWithSum()', () => {
     expect(hasTwoDigitsWithSum(123, 3)).toBe(true);
     expect(hasTwoDigitsWithSum(123, 5)).toBe(true);
     expect(hasTwoDigitsWithSum(123, 4)).toBe(true);
-    expect(hasTwoDigitsWithSum(101, 2)).toBe(true);
+    expect(hasTwoDigitsWithSum(1708, 15)).toBe(true);
   });
 
   test('should return false when two digits with sum is not equal to sum', () => {
