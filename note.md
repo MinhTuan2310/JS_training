@@ -43,3 +43,27 @@ function bubbleSort(arrayList) {
   }
   return newArr;
 }
+
+LINKED LIST
+
+
+STACK:
+- push: add stack item
+- pop : remove stack item
+- Last In First Out;
+
+QUEUE:
+- enqueue : add vào cuối hàng
+- dequeue: remove ra từ dầu hàng
+- FIFO;
+
+BIG O: time complexity cho truong hop tệ nhất
+- O(n) loop n vòng;
+- 0(n^2): nest 2 loop;
+- 0(1): best way;
+- 0(log(n)): best way;
+
+SEARCH: linear search & binary search;
+- linear search: loop qua 1 vòng rùi tìm kiếm (cach bth hay làm); // O(n)
+- binary search: mảng dầu vào phải là sort array, bao gồm left mid và right, mid = left + Math.trunc((right - left) / 2) dể tránh tràn số, nếu target > mid thì kiem tra típ từ mid + 1 => right, nếu target < mid thì kiem tra từ left => mid - 1; // O(log(n));
+

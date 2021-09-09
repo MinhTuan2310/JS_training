@@ -7,7 +7,7 @@ describe('countEmails()', () => {
     expect(countEmails("     ")).toBe("invalid param");
   });
 
-  test('should return obj when input valid', () => {
+  test('should return number of emails correctly when input valid', () => {
     expect(countEmails("tuanleminh@gmail.com")).toBe(1);
     expect(countEmails("tuanleminh@gm.com")).toBe(0);
     expect(countEmails("tleminh@gm.com")).toBe(0);

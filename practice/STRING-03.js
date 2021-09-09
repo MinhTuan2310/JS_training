@@ -1,16 +1,14 @@
-export function statisticsCharacters(str) {
+ export function statisticsCharacters(str) {
   if (typeof str !== 'string' || str.trim().length === 0) return 'invalid param';
 
   const obj =  str
     .split("")
     .reduce((acc, value) => {     
-      if(acc[value]) {
-        acc[value] += 1;
-      } else {
-        acc[value] = 1
-      }
+      acc[value] = (acc[value] || 0) + 1;
+
       return acc;
     }, {});
+
   // check and covert " " to space;
   if(obj[" "]) {
     obj.space = obj[" "];
@@ -19,4 +17,4 @@ export function statisticsCharacters(str) {
 
   return obj;
 }
-console.log(statisticsCharacters("a b c "));
+console.log(statisticsCharacters("f b c d e f f"));

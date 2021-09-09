@@ -4,31 +4,23 @@ export function countURLs(str) {
   return str
   .split(" ")
   .filter(item => hasProtocol(item) && hasDomain(item) && HasDomainName(item))
-  .reduce((acc, item) => ++acc, 0);
+  .length;
 }
 
 function hasProtocol(str) {
-  const protocol = ["http", "ws", "wss"];
+  const protocolList = ["http", "ws", "wss"];
 
-  let flag = false;
-  protocol.forEach(item => {
-    if(str.startsWith(item)) flag = true;
-  });
-
-  return flag;
+  return protocolList.some(protocol => str.startsWith(protocol));
 }
 
 function hasDomain(str) {
-  const domain = [".com", ".com.vn", ".vn"];
+  const domainList = [".com", ".com.vn", ".vn"];
 
-  let flag = false;
-  domain.forEach(item => {
-    if(str.endsWith(item)) flag = true;
-  });
-
-  return flag;
+  return domainList.some(domain => str.endsWith(domain));
 }
 
 function HasDomainName(str) {
   return str.slice(str.indexOf(":") + 3, str.indexOf(".")).length >= 3;
 }
+
+console.log(countURLs("my website is: http://ezfrontend.com you can visit it"));
