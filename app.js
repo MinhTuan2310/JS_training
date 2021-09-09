@@ -836,3 +836,22 @@
 //     .join("");
 // }
 // console.log(removeVowel(""));
+
+// let newArr = [];
+// function flatArr (arrayList, n) {
+//   if(!Array.isArray(arrayList) || arrayList.length === 0) return [];
+  
+//   while (n > 0) { 
+//     n--;
+//     if (newArr.length === 0) {
+//        newArr = arrayList.reduce((newArr, value) => newArr.concat(value), []);
+//     } else {
+//       newArr = newArr.reduce((newArr, value) => newArr.concat(value), []);
+//     }
+//   }
+
+//   return newArr;
+// }
+
+// console.log(flatArr([1,2,3,[4,[5,[5]]]], 10));
+

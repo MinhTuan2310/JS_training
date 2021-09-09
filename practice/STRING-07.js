@@ -12,6 +12,7 @@ function fillPath(path, params) {
         value = obj[key].toString();
         }
       })
+      
       return value;
   })
   .join("/");
