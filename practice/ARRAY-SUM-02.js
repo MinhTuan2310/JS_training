@@ -20,4 +20,4 @@ function sumAllDigits(numberList) {
 // console.log(sumAllDigits([]));
 // console.log(sumAllDigits([4]));
 // console.log(sumAllDigits([123, 4]));
-console.log(sumAllDigits([12, 3]));
+console.log(sumAllDigits([12, 34]));
