@@ -855,3 +855,12 @@
 
 // console.log(flatArr([1,2,3,[4,[5,[5]]]], 10));
 
+// const promise = new Promise((resolve, reject) => {
+
+//   setTimeout(() => resolve(5), 3000);
+// });
+
+// promise
+//   .then(result => console.log(result))
+//   .catch(error => console.log(error));
+

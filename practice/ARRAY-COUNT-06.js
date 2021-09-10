@@ -12,14 +12,17 @@ function countStudents(studentList, avgMark) {
   if(!Array.isArray(studentList)) return false;
 
   return studentList.reduce((count, student, index) => {
-    let sum = Object.values(student.marks).reduce((sum, mark) => sum + mark);
-    let avgOfStudent = sum / Object.keys(student.marks).length;
-    if(avgOfStudent >= avgMark) {
-      count += 1;
+    const markList = Object.values(student.marks);
+
+    const sumMark = markList.reduce((a, b)=> a + b);
+    const avgOfMark = sumMark / markList.length;
+
+    if(avgOfMark >= avgMark) {
+      count++;
     }
 
     return count;
-  }, 0)
+  }, 0);
 }
 
 console.log(countStudents(studentList, 7));

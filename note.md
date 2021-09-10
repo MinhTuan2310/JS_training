@@ -107,3 +107,31 @@ BAT DONG BO:
  + Callback queue: setTimeout, setInterval, ...
  + sync: push vào callstack
  + async: dẩy vào web api => callback queue or promise queque => chờ thang callstack xu lí xong => callstack;
+- USE THIS IN SETTIMEOUT:  setTimeOut tự bind cho this = global;
+const student = {
+  name : "tuan",
+  age: 20,
+
+  sayHello() {
+    console.log(this.name);
+  }
+}
++ cách 1: wrapper function; setTimeout(() => student.sayHello(), 2000);
++ cách 2: dùng bind, bind vào thằng hàm; setTimeout(student.sayHello.bind(student), 2000);
+
+- USE THIS IN NORMAL FUNCTION: lấy this của thằng gọi nó;
+- USE THIS IN ARROW FUNCTION: sẽ lấy this cha nó;
+
+-setTimeOut: nó sẽ chờ hàm thuc hien xong + them số s dã set;
+-setInterVal: cứ dúng theo thoi gian dã set gọi hàm 1 lần, ko quan tam hàm nó xử lí trong bao nhiu s;
+
+- PROMISE: gồm 3 states: pending, resolved(fullfill), rejected
++ resoolved thì ket quả trả về .then
++ reject thì throw lỗi về .catch
+
+- CSP: set cho website mình fetch từ những nguồn cụ thể
+- CORS: be k cho phép truy cap api, muon truy cap phải hỏi Be
+
++ ASYNC AWAIT
+- await phải nằm trong async funtion;
+- async luon trả về 1 promise;
