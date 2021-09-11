@@ -9,10 +9,12 @@ function insert(arr, newItem, k) {
     arr.push(newItem);
   }
 
+  arr.splice(k, 0, newItem);
+
   return arr;
 }
 
 console.log(insert([1,2,3], 0, -1));
 console.log(insert([1,2,3], 4, 10));
-console.log(insert([1,2,3], 2, 10));
+console.log(insert([1,2,3], 10, 2));
 

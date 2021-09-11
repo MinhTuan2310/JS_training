@@ -135,3 +135,4 @@ const student = {
 + ASYNC AWAIT
 - await phải nằm trong async funtion;
 - async luon trả về 1 promise;
+

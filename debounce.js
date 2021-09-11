@@ -1,21 +1,28 @@
-// function debounce(callback, wait) {
-//   let timeoutId;
 
-//   return function () {
-//     if (timeoutId) {
-//       clearTimeout(timeoutId);
+// function debounce(callback, wait) {
+//   let timeOutId;
+
+//   return function() {
+//     if(timeOutId) {
+//       clearTimeout(timeOutId);
 //     }
 
-//     timeoutId = setTimeout(callback, wait);
-//   };
-//  }
+//     timeOutId = setTimeout(callback, wait);
+//   }
+// }
 
-//  function log() {
-//   console.log('tada');
-//  }
- 
-//  const debounceLog = debounce(log, 500);
-//  debounceLog();
+// function log() {
+//   console.log("hahaha"); 
+// }
+
+// let debounceLog = debounce(log, 500);
+
+// debounceLog();
+
+function throttle() {
+
+  
+}
 
 
 
