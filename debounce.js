@@ -19,10 +19,5 @@
 
 // debounceLog();
 
-function throttle() {
-
-  
-}
-
 
 

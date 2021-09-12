@@ -14,7 +14,7 @@ function createStack() {
   }
 
   function push(data) {
-    stack.push(data)
+    stack.push(data);
   }
 
   function pop() {
@@ -41,31 +41,40 @@ const stack = createStack();
 function isValidBracketPairs(str) {
   if( str.length === 0) return true;
 
-  const bracketLeftList = ["(", "{", "["];
-  const bracketRightList = [")", "}", "]"];
+  const BRACKET_OPEN = {
+    "(": ")",
+    "[": "]",
+    "{": "}",
+  };
 
-  
-  const wordList =  str.split("");
+  const BRACKET_CLOSE = {
+    ")": "(",
+    "]": "[",
+    "}": "{",
+  };
 
-  for(let j = 0; j < wordList.length; j++) {
-    let word = wordList[j];
+  for (let i = 0; i < str.length; i++) {
+    let digit = str[i];
 
-    if(bracketLeftList.includes(word)) {
-      stack.push(word);
-      stack.push(bracketRightList[bracketLeftList.indexOf(word)]);
+    if(BRACKET_OPEN[digit]) {
+      stack.push(BRACKET_OPEN[digit]);
     }
 
-    if(bracketRightList.includes(word) && word === stack.getTop() && stack.getSize() === 2) {
-      stack.pop();
-      stack.pop();
-    } 
+    if(BRACKET_CLOSE[digit]) {
+      const bracketClose = stack.pop();
+     if(digit !== bracketClose) {
+
+       return false;
+     }
+    }
   }
-  return stack.print();
+
+  return stack.getSize() === 0;
 }
 
 console.log(isValidBracketPairs('(a+b) * (c+d)'));
-// console.log(isValidBracketPairs('(a+b)'));
-// console.log(isValidBracketPairs('(a+b) * (c[1'));
+console.log(isValidBracketPairs('(a+b)'));
+console.log(isValidBracketPairs('(a+b) * (c[1'));
 
 
 

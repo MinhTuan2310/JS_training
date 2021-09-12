@@ -864,5 +864,21 @@
 //   .then(result => console.log(result))
 //   .catch(error => console.log(error));
 
+// function isSymetricNumber (n) {
+//   if(n < 0) return false;
+
+//   let remaining = n;
+//   let newNumber = 0;
+
+//   while (remaining > 0) {
+//     const currentNumber = remaining % 10;
+//     newNumber = newNumber * 10 + currentNumber;
+
+//     remaining = Math.floor(remaining / 10);
+//   }
 
 
+//   return newNumber === n;
+// }
+
+// console.log(isSymetricNumber(3456543));
