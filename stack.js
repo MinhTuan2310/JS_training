@@ -38,43 +38,41 @@ function createStack() {
 const stack = createStack();
 
 
-function isValidBracketPairs(str) {
-  if( str.length === 0) return true;
+// function isValidBracketPairs(str) {
+//   if( str.length === 0) return true;
 
-  const BRACKET_OPEN = {
-    "(": ")",
-    "[": "]",
-    "{": "}",
-  };
+//   const BRACKETS_OPEN = {
+//     "(": ")",
+//     "[": "]",
+//     "{": "}",
+//   };
 
-  const BRACKET_CLOSE = {
-    ")": "(",
-    "]": "[",
-    "}": "{",
-  };
+//   const BRACKETS_CLOSE = {
+//     ")": "(",
+//     "]": "[",
+//     "}": "{",
+//   };
 
-  for (let i = 0; i < str.length; i++) {
-    let digit = str[i];
+//   for (let i = 0; i < str.length; i++) {
+//     let digit = str[i];
 
-    if(BRACKET_OPEN[digit]) {
-      stack.push(BRACKET_OPEN[digit]);
-    }
+//     if(BRACKETS_OPEN[digit]) {
+//       stack.push(BRACKETS_OPEN[digit]);
+//     }
 
-    if(BRACKET_CLOSE[digit]) {
-      const bracketClose = stack.pop();
-     if(digit !== bracketClose) {
+//     if(BRACKETS_CLOSE[digit]) {
+//       const bracketClose = stack.pop();
+//      if(digit !== bracketClose) {
 
-       return false;
-     }
-    }
-  }
+//        return false;
+//      }
+//     }
+//   }
 
-  return stack.getSize() === 0;
-}
+//   return stack.isEmpty();
+// }
 
-console.log(isValidBracketPairs('(a+b) * (c+d)'));
-console.log(isValidBracketPairs('(a+b)'));
-console.log(isValidBracketPairs('(a+b) * (c[1'));
-
-
+// console.log(isValidBracketPairs('(a+b) * (c+d)'));
+// console.log(isValidBracketPairs('(a+b)'));
+// console.log(isValidBracketPairs('(a+b) * (c[1'));
 

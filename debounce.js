@@ -1,23 +1,22 @@
 
-// function debounce(callback, wait) {
-//   let timeOutId;
 
-//   return function() {
-//     if(timeOutId) {
-//       clearTimeout(timeOutId);
-//     }
+function log() {
+  console.log('debouce me please');
+}
 
-//     timeOutId = setTimeout(callback, wait);
-//   }
-// }
+function debounce(callback, await) {
+  let timeoutId;
 
-// function log() {
-//   console.log("hahaha"); 
-// }
+  return function() {
+    if(timeoutId) {
+      clearTimeout(timeoutId);
+    }
 
-// let debounceLog = debounce(log, 500);
+    timeoutId = setTimeout(callback, await);
+  }
+}
 
-// debounceLog();
+const debounceLog = debounce(log, 2000);
 
-
+debounceLog();
 

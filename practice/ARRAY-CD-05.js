@@ -15,6 +15,21 @@ function removeDuplicatedNumbers(numberList) {
       return number;
     }
   });
+
+  // let obj = {};
+  // let newArray = [];
+
+  // for (let i = 0; i < numberList.length; i++) {
+  //   number = numberList[i];
+
+  //   obj[number] = (obj[number] || 0) + 1;
+
+  //   if(obj[number] === 1) {
+  //     newArray.push(number)
+  //   }
+  // }
+
+  // return newArray;
 }
 
 

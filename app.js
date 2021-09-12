@@ -882,3 +882,20 @@
 // }
 
 // console.log(isSymetricNumber(3456543));
+
+const user = {
+  number: 2,
+}
+
+function sayHi(a,b){
+  return this.number + a + b;
+}
+
+const newNumber = sayHi.bind(user);
+
+
+console.log(sayHi.call(user,2,3));
+console.log(newNumber(2,3));
+
+
+
