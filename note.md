@@ -136,3 +136,5 @@ const student = {
 - await phải nằm trong async funtion;
 - async luon trả về 1 promise;
 
++ BROWSERS: 
+- BROWSER URL: uri gồm urn(name) url(location), hosting: 1 con server tại 1 IP nào dó, domain sẽ trỏ tới hosting của mình

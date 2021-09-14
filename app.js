@@ -883,19 +883,26 @@
 
 // console.log(isSymetricNumber(3456543));
 
-const user = {
-  number: 2,
-}
+// const user = {
+//   number: 2,
+// }
 
-function sayHi(a,b){
-  return this.number + a + b;
-}
+// function sayHi(a,b){
+//   return this.number + a + b;
+// }
 
-const newNumber = sayHi.bind(user);
-
-
-console.log(sayHi.call(user,2,3));
-console.log(newNumber(2,3));
+// const newNumber = sayHi.bind(user);
 
 
+// console.log(sayHi.call(user,2,3));
+// console.log(newNumber(2,3));
 
+
+
+
+
+
+console.log(findIncSubArr([1,2,3,-5,-10,-15,5,10,15]));
+console.log(findIncSubArr([1,2,3,-5,-10,5,10,15]));
+console.log(findIncSubArr([1,2,3,-5,-10,5,10]));
+console.log(findIncSubArr([3,-5,-10,5,10]));

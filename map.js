@@ -22,3 +22,4 @@ const cityMap2 = cityList.reduce((map, city) => {
 }, {});
 
 console.log(cityMap2);
+  

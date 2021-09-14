@@ -1,25 +1,23 @@
 function findAllDecreasingSubArr(numberList) {
-  if(!Array.isArray(numberList) || numberList.length < 3) return false;
+  if(!Array.isArray(numberList) || numberList.length < 3) return [];
 
-  let subArr = [];
+  let subArr = [numberList[0]];
   let subArrList = [];
-  let min = 0;
 
-  for(let i = 0; i < numberList.length; i++) {
-    let number = numberList[i];
+  for(let i = 1; i < numberList.length; i++) {
+    let curr = numberList[i];
+    let prev = numberList[i - 1];
 
-    if(min === 0 || number < min) {
-      min = number;
-      subArr.push(number);
+    if(curr >= prev) {
+      if(subArr.length >= 2) subArrList.push(subArr);
+
+      subArr = [curr];
+      continue;
     }
-    if((number > min || i === numberList.length - 1) && subArr.length > 2) {
-      subArrList.push(subArr);
-      subArr = [];
-      min = 0;
-      if(number > numberList[i + 1] && i !== numberList.length - 1) {
-        subArr.push(number);
-      }
-    }
+
+    subArr.push(curr);
+
+    if(subArr.length >= 2 && i === numberList.length - 1) subArrList.push(subArr);
   }
 
   return subArrList;
