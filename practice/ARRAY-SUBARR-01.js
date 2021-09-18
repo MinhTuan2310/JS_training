@@ -17,7 +17,9 @@ function findIncSubArr(numberList) {
     }
 
     // processing
-    subArr.push(curr);
+    if(curr > prev) {
+      subArr.push(curr);
+    }
 
     // slice when pointer at the end of array;
     if(subArr.length >= 2 && i === numberList.length - 1) {
@@ -27,4 +29,6 @@ function findIncSubArr(numberList) {
 
   return subArrList;
 }
+
+console.log(findIncSubArr([1,2,3,4,2,1,3,5,7]));
 

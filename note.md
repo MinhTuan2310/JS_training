@@ -138,3 +138,9 @@ const student = {
 
 + BROWSERS: 
 - BROWSER URL: uri gồm urn(name) url(location), hosting: 1 con server tại 1 IP nào dó, domain sẽ trỏ tới hosting của mình
+
+STORAGE API:
+- session storage: chứa dữ liệu tren 1 tab, mở qua tab mới là mất;
+- local storage: save data cho 1 origin, cả cả khi dóng web.
+- private mode: tắt trình duyet thì local storage mất luon :D;
+- cookies: su dung du lieu nguoi dùng, dong y hay hem ?

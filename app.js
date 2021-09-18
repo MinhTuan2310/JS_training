@@ -902,7 +902,55 @@
 
 
 
-console.log(findIncSubArr([1,2,3,-5,-10,-15,5,10,15]));
-console.log(findIncSubArr([1,2,3,-5,-10,5,10,15]));
-console.log(findIncSubArr([1,2,3,-5,-10,5,10]));
-console.log(findIncSubArr([3,-5,-10,5,10]));
+// console.log(findIncSubArr([1,2,3,-5,-10,-15,5,10,15]));
+// console.log(findIncSubArr([1,2,3,-5,-10,5,10,15]));
+// console.log(findIncSubArr([1,2,3,-5,-10,5,10]));
+// console.log(findIncSubArr([3,-5,-10,5,10]));
+
+
+// function getMaxDigit(n) {
+//   if (n < 0 || n > 1000 || n !== Number.parseInt(n)) return -1;
+  
+//   const theOnes = n % 10;
+//   const theTens = Math.trunc(n / 10) % 10;
+//   const theHundreds = Math.trunc(n / 100);
+
+//   if(n < 10) return n;
+//   if(n >= 10 && n < 100) return Math.max(theTens, theOnes);
+  
+//   return Math.max(theHundreds, theTens, theOnes);
+// }
+// console.log(getMaxDigit(721));
+// console.log(getMaxDigit(12));
+// console.log(getMaxDigit(10));
+// console.log(getMaxDigit(0));
+// console.log(getMaxDigit(1001));
+
+
+
+// const foodList = [
+//   {food: 'apple', type: 'fruit'},
+//   {food: 'potato', type: 'vegetable'},
+//   {food: 'banana', type: 'fruit'},
+// ];
+// function transformArray(arr) {
+//   if(!Array.isArray(arr) || arr.length === 0) return [];
+
+//   const res = [];
+//   const map = {};
+//   let i, j, curr;
+
+//   for (i = 0; i < arr.length; i++) {
+//      curr = arr[i];
+
+//      if (!(curr.type in map)) {
+//         map[curr.type] = {type: curr.type, foods: []};
+//         res.push(map[curr.type]);
+//      };
+
+//      map[curr.type].foods.push(curr.food);
+//   };
+
+//   return res;
+// };
+// console.log(transformArray(foodList));
