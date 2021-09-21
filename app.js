@@ -954,3 +954,48 @@
 //   return res;
 // };
 // console.log(transformArray(foodList));
+
+// function divisibleBy(n) {
+
+//   return function (number) {
+      
+//     return number % n === 0 ? true : false;
+//   };
+// }
+
+// function createRandomColorFn(colorList) {
+//   if(!Array.isArray(colorList)) throw new Error('colorList should be an array');
+//   if(colorList.length === 0) throw new Error('colorList should not be empty');
+//   if(colorList.length === 1) throw new Error('colorList should have more than one item');
+
+//   let prevIndex;
+
+//   return function() {
+
+//     let index = Math.floor(Math.random() * colorList.length);
+
+//     while(prevIndex === index) {
+//       index = Math.floor(Math.random() * colorList.length);
+//     }
+
+//     prevIndex = index;
+//     return colorList[index];
+//   };
+// }
+
+// function createCounter() {
+//   let counter = 0;
+
+//   return function (label = 'default') {
+//     counter++;
+    
+//     return `${label}: ${counter}`;
+//   };
+// }
+
+// const counter = createCounter();
+
+// console.log(counter("count"));
+// console.log(counter("count"));
+// console.log(counter("count"));
+// console.log(counter("count"));
