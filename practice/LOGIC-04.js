@@ -30,10 +30,30 @@
 //   .find(key => obj[key] === maxNumber);
 // }
 
-// console.log(findMostFrequentNumber([1]));
-// console.log(findMostFrequentNumber([1, 2, 3, 2]));
-// console.log(findMostFrequentNumber([1, 2, 3, 2, 3, 3, 4, 4, 4, 4, 4]));
-// console.log(findMostFrequentNumber([1, 2, 3, 2, 4]));
+function  findMostFrequentNumber(numberList) {
+  if(!Array.isArray(numberList)) return 0;
+  
+  const map = {};
+  let max = 0;
+  let res = 0;
+  
+  for(let i = 0; i < numberList.length; i++) {
+    let number = numberList[i];
+    map[number] = (map[number] || 0) + 1;
+
+    if(map[number] > max) {
+      max = map[number];
+      res = number;
+    }
+  }
+  
+  return res;
+}
+
+console.log(findMostFrequentNumber([1]));
+console.log(findMostFrequentNumber([1, 1, 2, 3, 2]));
+console.log(findMostFrequentNumber([1, 2, 3, 2, 3, 3, 4, 4, 4, 4, 4]));
+console.log(findMostFrequentNumber([1, 2, 3, 2, 4]));
 
 
 
