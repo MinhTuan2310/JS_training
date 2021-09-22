@@ -3,26 +3,25 @@ function fillPath(path, params) {
 
 
   const obj = {...params};
-  const arrayList =  path.split("/");
+  const wordList =  path.split("/");
 
-  return arrayList
-    .map((value, index) => {
-      Object.keys(obj).forEach(key => {
-        if(value.indexOf(key) !== -1) {
-        value = obj[key].toString();
+  return wordList
+    .map((word, index) => {
+      Object.keys(params).forEach(key => {
+        if(word.slice(1) === key) {
+          word = params[key] + "";
         }
-      })
-      
-      return value;
+      });
+
+      return word;
   })
   .join("/");
 }
+
+
+
 console.log(fillPath('/categories/:categoryId/products/:productId', { 
-  categoryId: 1, 
-  productId: 2
+  categoryId: 5, 
+  productId: 6
  }));
-
-
-
-
 
