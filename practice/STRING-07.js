@@ -2,7 +2,6 @@ function fillPath(path, params) {
   if(typeof params !== "object" || params === null || Array.isArray(params) || typeof path !== 'string') return false;
 
 
-  const obj = {...params};
   const wordList =  path.split("/");
 
   return wordList
