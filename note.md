@@ -144,3 +144,8 @@ STORAGE API:
 - local storage: save data cho 1 origin, cả cả khi dóng web.
 - private mode: tắt trình duyet thì local storage mất luon :D;
 - cookies: su dung du lieu nguoi dùng, dong y hay hem ?
+
+DOM: 
+- cloneNode: copy inline event luon;
+- textContent: chỉ lấy text content của node;
+- innerText: hiểu styling nhoe; ví dụ trong thẻ h1 có display: hidden là nó ẩn luon ý;
